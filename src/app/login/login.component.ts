@@ -14,7 +14,9 @@ export class LoginComponent implements OnInit {
 
   database:any={
     1000:{acno:1000,username:'max',password:1000,balance:5000}
-   
+
+
+
     
   }
 
@@ -33,27 +35,55 @@ pswdchange(event:any){
 
 }
 
-  login(){
-   var acno = this.acno
+//   login(){
+//    var acno = this.acno
   
-   var pswd = this.pswd
+//    var pswd = this.pswd
    
+
+// let userdetails = this.database
+// if(acno in userdetails){
+//   if(pswd == userdetails[acno]['password']){
+//     alert('login is successful')
+  
+//   }
+//   else{
+//     alert('incorrect password')
+
+//   }
+// }
+// else{
+//   alert('user does not exist')
+// }
+
+//   }
+
+
+login(a:any,p:any){
+
+console.log(a);
+
+  //
+  var acno = a.value
+ 
+  var pswd = p.value
+  
 
 let userdetails = this.database
 if(acno in userdetails){
-  if(pswd == userdetails[acno]['password']){
-    alert('login is successful')
-  
-  }
-  else{
-    alert('incorrect password')
+ if(pswd == userdetails[acno]['password']){
+   alert('login is successful')
+ 
+ }
+ else{
+   alert('incorrect password')
 
-  }
+ }
 }
 else{
-  alert('user does not exist')
+ alert('user does not exist')
 }
 
-  }
+ }
 
 }

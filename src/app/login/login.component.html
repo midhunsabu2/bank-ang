@@ -5,13 +5,13 @@
         <form action="" class="border   m-5 p-5">
             <h2 class="text-center ">Login Form</h2>
             <div class="m-3">
-                <input (change)="acnochange($event)" class="form-control" type="text" [placeholder]=" accplaceholder ">
+                <input #acno class="form-control" type="text" [placeholder]=" accplaceholder ">
             </div>
             <div class="m-3">
-                <input (change)="pswdchange($event)" class="form-control" type="password" placeholder="Password">
+                <input #pswd class="form-control" type="password" placeholder="Password">
             </div>
             <div class="m-3">
-                <input (click)="login()" class="btn btn-primary" type="button" value="Login">
+                <input (click)="login(acno,pswd)" class="btn btn-primary" type="button" value="Login">
             </div>
             <div>
                 <label for="" class="">Not a user? click here <a href="">Register</a></label>
